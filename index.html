@@ -1,62 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockeys</title>
     <!-- css link -->
     <link rel="stylesheet" href="style.css">
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--tailwindcss &  daisyui link  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <!--Manrope fonts link  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!--customizing  config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        comColor: '#da373d',
+                        txColor: '#131318',
+                        dcolor: '#424247'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 
-<body class="manrope">
-    <header>
+<body class="p-0 m-0 manrope">
+    <header class="container mx-auto">
         <!-- Navbar start here -->
-        <div class="navbar bg-base-100">
+        <nav class="navbar bg-base-100 mb-16">
             <div class="navbar-start">
-              <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-bold active:bg-comColor text-dcolor ">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
+                    </ul>
                 </div>
-                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                  <li><a>Home</a></li>
-                  <li><a>About</a></li>
-                  <li><a>Pages</a></li>
-                  <li><a>Blog</a></li>
-                  <li><a>Contact</a></li>
-                </ul>
-              </div>
-              <a class="btn btn-ghost text-xl">daisyUI</a>
+                <a class="btn btn-ghost text-2xl md:text-4xl font-extrabold text-txColor">Hockey<span
+                        class="text-comColor">’</span>s</a>
             </div>
             <div class="navbar-center hidden lg:flex">
-              <ul class="menu menu-horizontal px-1">
-                <li><a>Item 1</a></li>
-                <li>
-                  <details>
-                    <summary>Hockey<span>’</span>s</summary>
-                    <ul class="p-2">
-                      <li><a>Submenu 1</a></li>
-                      <li><a>Submenu 2</a></li>
-                    </ul>
-                  </details>
-                </li>
-                <li><a>Item 3</a></li>
-              </ul>
+                <ul class="menu menu-horizontal px-1 font-bold text-dcolor">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Pages</a></li>
+                    <li><a>Blog</a></li>
+                    <li><a>Contact</a></li>
+                </ul>
             </div>
-            <div class="navbar-end">
-              <a class="btn">Button</a>
-            </div>
-          </div>
-        <!-- Navbar ends here -->
-    </header>
-    <main>
 
+            <div class="navbar-end">
+                <i class="fa-solid fa-magnifying-glass text-2xl hidden md:block mr-6"></i>
+                <a class="btn bg-comColor text-white text-lg md:text-xl font-bold md:px-6">Get Ticket</a>
+            </div>
+        </nav>
+        <!-- Navbar ends here -->
+        <!-- Banner section start here  -->
+        <div class="relative px-5">
+            <!-- carousel start here -->
+            <div class="carousel w-full md:h-[550px]">
+                <div id="slide1" class="carousel-item relative w-full ">
+                    <img src="./Images/1.png" class="w-full" />
+                    <div class="absolute flex  transform -translate-y-1/2 left-5 gap-x-6 bottom-5  pl-8">
+                        <a href="#slide4" class="btn btn-circle hover:text-black bg-black text-white ">❮</a>
+                        <a href="#slide2" class="btn btn-circle  hover:text-black bg-black text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide2" class="carousel-item relative w-full ">
+                    <img src="./Images/2.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 gap-x-6 bottom-5 pl-8">
+                        <a href="#slide1" class="btn btn-circle  hover:text-black bg-black text-white">❮</a>
+                        <a href="#slide3" class="btn btn-circle  hover:text-black bg-black text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide3" class="carousel-item relative w-full ">
+                    <img src="./Images/3.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 gap-x-6 bottom-5 pl-8">
+                        <a href="#slide2" class="btn btn-circle  hover:text-black bg-black text-white">❮</a>
+                        <a href="#slide4" class="btn btn-circle  hover:text-black bg-black text-white">❯</a>
+                    </div>
+                </div>
+                <div id="slide4" class="carousel-item relative w-full ">
+                    <img src="./Images/4.png" class="w-full" />
+                    <div class="absolute flex justify-between transform -translate-y-1/2 left-5 gap-x-6 bottom-5 pl-8">
+                        <a href="#slide3" class="btn btn-circle  hover:text-black bg-black text-white">❮</a>
+                        <a href="#slide1" class="btn btn-circle  hover:text-black bg-black text-white">❯</a>
+                    </div>
+                </div>
+            </div>
+            <!-- carousel ends here -->
+            <div class="md:w-[502px]  bg-black text-white p-8 rounded-md md:absolute right-8 bottom-8  ">
+                <h4 class="text-2xl mb-4">Meet all the heroes from the field</h4>
+                <p class="text-base">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+            </div>
+        </div>
+        <!-- Banner section ends here  -->
+    </header>
+    <main class="container mx-auto mt-16">
+        <!-- Professional Hockeys Club start here -->
+        <section class="text-center">
+            <div>
+                <h3 class="text-4xl font-extrabold mb-2">Professional Hockeys Club</h3>
+                <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+            </div>
+        </section>
     </main>
     <footer>
 
